@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4ywhj2u0mevh"]
+
+[ext_resource type="Script" path="res://Particle.gd" id="1_57xdn"]
+[ext_resource type="Texture2D" uid="uid://dg834b1kccevy" path="res://particle.png" id="2_s3fxr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rsclm"]
+radius = 182.792
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0xtk6"]
+radius = 2221.67
+
+[node name="Particle" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_57xdn")
+metadata/colour = ""
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rsclm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_s3fxr")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(3, 3)
+shape = SubResource("CircleShape2D_0xtk6")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

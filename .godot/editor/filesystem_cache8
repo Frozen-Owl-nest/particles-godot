@@ -1,0 +1,8 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1712858003
+icon.svg::CompressedTexture2D::4483831583917130644::1710587242::1710587249::1::::<><>::
+node_2d.tscn::PackedScene::4629968233403440404::1712160141::0::1::::<><>::res://world.gd
+Particle.gd::GDScript::-1::1712085276::0::1::::<>Node2D<>::
+particle.png::CompressedTexture2D::7650271535757548898::1710588735::1710588797::1::::<><>::
+particle.tscn::PackedScene::4472791005054135697::1712160141::0::1::::<><>::res://Particle.gd<>uid://dg834b1kccevy::::res://particle.png
+world.gd::GDScript::-1::1711322511::0::1::::<>Node2D<>::
